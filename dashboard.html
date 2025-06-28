@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eef2f5;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .dashboard {
+      background-color: white;
+      margin-top: 50px;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .user-info {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .user-info h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .saldo {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .acciones {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .acciones button {
+      padding: 0.8rem;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .acciones button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+    <div class="user-info">
+      <h2 id="userName">Nombre Usuario</h2>
+      <p id="userEmail">usuario@email.com</p>
+    </div>
+
+    <div class="saldo">
+      Saldo: $<span id="userSaldo">0.00</span>
+    </div>
+
+    <div class="acciones">
+      <button onclick="enviarDinero()">Enviar Dinero</button>
+      <button onclick="recibirDinero()">Recibir Dinero</button>
+      <button onclick="transferir()">Transferir</button>
+      <button onclick="pagar()">Pagar</button>
+    </div>
+  </div>
+
+  <script>
+    // Simulación de datos del usuario (pueden venir del login o backend)
+    const usuario = {
+      nombre: "Juan Pérez",
+      email: "juanperez@email.com",
+      saldo: 12500.75
+    };
+
+    // Mostrar datos en el DOM
+    document.getElementById("userName").textContent = usuario.nombre;
+    document.getElementById("userEmail").textContent = usuario.email;
+    document.getElementById("userSaldo").textContent = usuario.saldo.toFixed(2);
+
+    // Funciones de acción (pueden ser desarrolladas más adelante)
+    function enviarDinero() {
+      alert("Función: Enviar Dinero");
+    }
+
+    function recibirDinero() {
+      alert("Función: Recibir Dinero");
+    }
+
+    function transferir() {
+      alert("Función: Transferir");
+    }
+
+    function pagar() {
+      alert("Función: Pagar");
+    }
+  </script>
+
+</body>
+</html>
